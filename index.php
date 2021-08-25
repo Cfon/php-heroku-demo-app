@@ -11,7 +11,11 @@
     <title>Hello, world!</title>
   </head>
   <body class="container">
-    <h1>Hello, world!</h1>
+    <h1><?= 'Hello, PHP world!' ?></h1>
+
+    <?php
+	  echo 'Hello, PHP world!';
+	?>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
