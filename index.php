@@ -15,7 +15,8 @@
     	<div class="row">
     		<div class="col-12">
 			  <button class="btn btn-success mt-2">
-			    <i class="fa fa-plus"></i>
+			    <!--<i class="fa fa-plus"></i>-->
+				Submit
 			  </button>
 			</div>
     	</div>
