@@ -1,6 +1,10 @@
 <?php
-
-echo 'setWebhook'.PHP_EOL;
+?>
+<pre>
+<?php
+	var_dump(file_get_contents('php://input'));
+?>
+</pre>
 
 /* $connection = mysqli_connect('sql3.freemysqlhosting.net', 'sql3433617', 'eM9lT7XZNS', 'sql3433617');
 
