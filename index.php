@@ -1,3 +1,29 @@
+<?php
+$connection = mysqli_connect('sql3.freemysqlhosting.net', 'sql3433617', 'eM9lT7XZNS', 'sql3433617');
+
+if (!$connection) {
+	exit('Невозможно подключиться к базе данных: <br>') . mysql_error();
+}
+
+$db = mysqli_select_db($connection, 'sql3433617');
+
+if (!$db) {
+	exit('Невозможно выбрать базу данных: <br>') . mysql_error();
+}
+
+$result = mysqli_query($connection, 'SELECT * FROM `users`');
+
+if (!$result) {
+	exit('Невозможно выполнить запрос к базе данных: <br>') . mysql_error();
+}
+
+while ($row = mysqli_fetch_assoc($result)) {
+	echo 'Name: '.$row['name'].'<br>';
+	echo 'Age: '.$row['age'].'<br>';	
+}
+
+// var_dump($result);
+?>
 <!doctype html>
 <html lang="en">
   <head>    
@@ -15,7 +41,9 @@
 			  <button class="btn btn-success mt-2">
 			    <i class="fa fa-plus"></i>					
 			  </button>
-			  <?= phpinfo() ?>
+			  <?php
+	
+			  ?>
 			</div>
     	</div>
     </div>
