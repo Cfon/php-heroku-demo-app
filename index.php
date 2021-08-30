@@ -6,6 +6,7 @@
 ?>
 </pre>
 
+<?php
 /* $connection = mysqli_connect('sql3.freemysqlhosting.net', 'sql3433617', 'eM9lT7XZNS', 'sql3433617');
 
 if (!$connection) {
