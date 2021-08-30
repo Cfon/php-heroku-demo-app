@@ -17,11 +17,6 @@ if (!$result) {
 	exit('Невозможно выполнить запрос к базе данных: <br>') . mysql_error();
 }
 
-while ($row = mysqli_fetch_assoc($result)) {
-	echo 'Name: '.$row['name'].'<br>';
-	echo 'Age: '.$row['age'].'<br>';	
-}
-
 // var_dump($result);
 ?>
 <!doctype html>
@@ -41,9 +36,31 @@ while ($row = mysqli_fetch_assoc($result)) {
 			  <button class="btn btn-success mt-2">
 			    <i class="fa fa-plus"></i>					
 			  </button>
-			  <?php
-	
-			  ?>
+			  <table class="table">
+				  <thead>
+					<tr>
+					  <th scope="col">#</th>
+					  <th scope="col">Name</th>
+					  <th scope="col">Age</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<!-- <tr>
+					  <th scope="row">1</th>
+					  <td>Mark</td>
+					  <td>Otto</td>
+					  <td>@mdo</td>
+					</tr> -->	
+					<?php
+						while ($row = mysqli_fetch_assoc($result)) {
+							echo '<tr>';
+							echo '<td>Name: '.$row['name'].'</td>';
+							echo '<td>Age: '.$row['age'].'</td>';	
+							echo '</tr>';
+						}
+					?>
+				  </tbody>
+			  </table>			  
 			</div>
     	</div>
     </div>
