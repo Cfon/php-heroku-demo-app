@@ -54,7 +54,7 @@ if (!$result) {
 					<?php
 						while ($row = mysqli_fetch_assoc($result)) {
 							echo '<tr>';
-							echo '<th scope="row">1</th>';
+							echo '<td>'.$row['id'].'</th>';
 							echo '<td>'.$row['name'].'</td>';
 							echo '<td>'.$row['age'].'</td>';	
 							echo '</tr>';
