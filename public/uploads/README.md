@@ -1,1 +1,0 @@
-# php-heroku-demo-app

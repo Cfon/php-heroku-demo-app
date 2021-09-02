@@ -2,11 +2,6 @@
 
 include __DIR__ . '/../src/db_config.php';
 
-// use const App\HerokuDemoApp\HOST;
-// use const App\HerokuDemoApp\DB_NAME;
-// use const App\HerokuDemoApp\USERNAME;
-// use const App\HerokuDemoApp\PASSWORD;
-
 // PDO
 try {
 	$conn_str = 'mysql:host='.HOST.';dbname='.DB_NAME;
@@ -59,6 +54,7 @@ if (isset($_POST['submit'])) {
 		// echo $path;
 		// echo "$path/{$upload_file['name']}";
 		// unlink($upload_file['tmp_name']);
+		
 	}
 }
 
