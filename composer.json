@@ -1,0 +1,9 @@
+{
+    "name": "heroku-demo-app",
+    "autoload": {
+        "psr-4": {
+            "App\\HerokuDemoApp\\": "src/"
+        }
+    },    
+    "require": {}
+}
