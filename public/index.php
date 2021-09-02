@@ -49,12 +49,14 @@ if (isset($_POST['submit'])) {
 	if (isset($_FILES['upload_file'])) {
 		$upload_file = $_FILES['upload_file'];
 		// var_dump($upload_file);
-		$path = __DIR__ . '/uploads';
-		move_uploaded_file($upload_file['tmp_name'], "$path/{$upload_file['name']}");
-		// echo $path;
-		// echo "$path/{$upload_file['name']}";
-		// unlink($upload_file['tmp_name']);
+		$path = __DIR__ . '/uploads';						
+		// move_uploaded_file($upload_file['tmp_name'], "$path/{$upload_file['name']}");
 		
+		echo $path;
+		echo "$path/{$upload_file['name']}";
+		echo "{$upload_file['tmp_name']}";
+		
+		// unlink($upload_file['tmp_name']);		
 	}
 }
 
