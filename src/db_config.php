@@ -1,15 +1,13 @@
 <?php
 namespace App\HerokuDemoApp;
 
-const HOST = 'sql3.freemysqlhosting.net';
-const DB_NAME = 'sql3433617';
-const USERNAME = 'sql3433617';
-const PASSWORD = '';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// class Config 
-// {
-	// public static $HOST = 'sql3.freemysqlhosting.net';
-	// public static $DB_NAME = 'sql3433617';
-	// public static $USERNAME = 'sql3433617';
-	// public static $PASSWORD = '';
-// }
+$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+define('HOST', $_ENV['MYSQL_HOST']);
+define('DB_NAME', $_ENV['DB_NAME']);
+define('USERNAME', $_ENV['USER_NAME']);
+define('PASSWORD', $_ENV['DB_PASSWORD']);
+

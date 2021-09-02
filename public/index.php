@@ -2,10 +2,10 @@
 
 include __DIR__ . '/../src/db_config.php';
 
-use const App\HerokuDemoApp\HOST;
-use const App\HerokuDemoApp\DB_NAME;
-use const App\HerokuDemoApp\USERNAME;
-use const App\HerokuDemoApp\PASSWORD;
+// use const App\HerokuDemoApp\HOST;
+// use const App\HerokuDemoApp\DB_NAME;
+// use const App\HerokuDemoApp\USERNAME;
+// use const App\HerokuDemoApp\PASSWORD;
 
 // PDO
 try {
