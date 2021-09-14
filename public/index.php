@@ -15,20 +15,24 @@ const BASE_URL = 'https://api.telegram.org/bot' . TOKEN;
 const NGROK_URL = 'https://7881-213-230-112-143.ngrok.io/';
 const WEBHOOK_URL = 'https://api.telegram.org/bot'.TOKEN.'/setwebhook?url='.NGROK_URL;
 
-// https://api.telegram.org/bot1769651257:AAH4C04zGbCtQwk1_wJrvj_geZsr2BKZJm4/setwebhook?url=https://d1e8-213-230-112-143.ngrok.io
-// https://d36fa284.ngrok.io/
-// https://d1e8-213-230-112-143.ngrok.io
+// setWebhook 
+// https://api.telegram.org/bot1769651257:AAH4C04zGbCtQwk1_wJrvj_geZsr2BKZJm4/setwebhook?url=https://php-heroku-demo-app.herokuapp.com
 
-// https://php-heroku-demo-app.herokuapp.com/
+// https://2930-213-230-112-143.ngrok.io
+
+// https://php-heroku-demo-app.herokuapp.com
 
 $content = file_get_contents('php://input');
 
 if ($content) {
     $token = TOKEN;
     $apiLink = "https://api.telegram.org/bot$token/";
-    echo '<pre>content = '; print_r($content); echo '</pre>';
-
     
+    echo '<pre>content: '; 
+    var_dump($content); 
+    echo '</pre>';    
+    // $obj = json_decode($content);
+    // echo $obj->name . '<br>';    
 }
 else {
     echo '<div class="subtitle">Only telegram can access this url.</div>';
